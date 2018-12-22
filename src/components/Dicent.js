@@ -4,19 +4,21 @@ import './Dicent.css'
 import Dice from './Dice';
 import Control from './Control';
 
+const initial_state = {
+    red_cant: 0,
+    blue_cant : 0,
+    yellow_cant: 0,
+    green_cant: 0,
+    brown_cant: 0,
+    grey_cant: 0,
+    black_cant: 0
+};
+
 class Dicent extends Component{
 
     constructor(props){
         super(props)
-        this.state = {
-            red_cant: 0,
-            blue_cant : 0,
-            yellow_cant: 0,
-            green_cant: 0,
-            brown_cant: 0,
-            grey_cant: 0,
-            black_cant: 0
-        }
+        this.state = initial_state;
         this.addDice = this.addDice.bind(this);
         this.reset = this.reset.bind(this);
     }
@@ -26,20 +28,12 @@ class Dicent extends Component{
         console.log("hola")
         this.setState({
             [color]: this.state[color] + 1
-        })
+        });
     }
     
     reset(){
         console.log("reset")
-        this.setState({
-            red_cant: 0,
-            blue_cant: 0,
-            yellow_cant: 0,
-            green_cant: 0,
-            brown_cant: 0,
-            grey_cant: 0,
-            black_cant: 0
-        })
+        this.setState(initial_state);
     }
 
     render(){
