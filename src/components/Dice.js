@@ -5,7 +5,7 @@ class Dice extends Component{
     
     render(){
         return(
-            <div className="Dice" onClick={this.props.click}>
+            <div className="Dice" onClick={this.props.click} style={{ backgroundColor: this.props.color }}>
                 {this.props.text}
             </div>
         )

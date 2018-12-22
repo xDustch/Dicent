@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Righteous');
+
 .Dicent{
     width: 360px;
     height: 640px;
@@ -17,11 +19,16 @@
     width: 100%;
     height: 100%;
     background-color: #bada55;
-    outline: 1px solid red;
+    box-sizing: border-box;
+    border: 5px solid black;
+
+    font-family: 'Righteous', cursive;
 
     display: flex;
     justify-content: center;
     align-items: center;
+
+    cursor: pointer;
 }
 
 .display-container{
@@ -33,15 +40,30 @@
     grid-template-rows: 6fr 1fr;
 }
 
+.Display{
+    width: 100%;
+    height: 100%;
+    background-color: #fbfbfb;
+    box-sizing: border-box;
+    border: 5px solid black;
+
+    grid-row: 1;
+}
+
 .Control{
     width: 100%;
     height: 100%;
-    background-color: #101170;
+    background-color: #D06900;
+    box-sizing: border-box;
+    border: 5px solid black;
+
     grid-row: 2;
 
     display: flex;
     justify-content: center;
     align-items: center;
+
+    cursor: pointer;
 }
 
 @media (max-width: 360px){
