@@ -2,13 +2,16 @@
     width: 360px;
     height: 640px;
     background-color: salmon;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
 }
 .dice-container{
-    width: 33%;
+    width: 100%;
     height: 100%;
     display: grid;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
     background-color: #b00b55;
+    grid-column: 1;
 }
 .Dice{
     width: 100%;
@@ -17,9 +20,20 @@
     outline: 1px solid red;
 }
 
+.display-container{
+    width: 100%;
+    height: 100%;
+    background-color: #208075;
+    grid-column: 2;
+}
+
 @media (max-width: 360px){
     .Dicent{
         width: 100%;
+    }
+}
+@media  (max-height: 640px){
+    .Dicent{
         height: 100vh;
     }
 }
