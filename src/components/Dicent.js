@@ -12,7 +12,11 @@ const initial_state = {
     green_cant: 0,
     brown_cant: 0,
     grey_cant: 0,
-    black_cant: 0
+    black_cant: 0,
+    dmg: 0,
+    surge: 0,
+    range: 0,
+    block: 0,
 };
 
 class Dicent extends Component{
@@ -26,9 +30,12 @@ class Dicent extends Component{
 
 
     addDice(color){//increments dice count of variable color
-        console.log("hola")
+        console.log("hola");
+        let side = Math.floor(Math.random() * 6) + 1;
+        console.log(side);
         this.setState({
-            [color]: this.state[color] + 1
+            [color]: this.state[color] + 1,
+            block: this.state.block + side
         });
     }
     
@@ -50,7 +57,7 @@ class Dicent extends Component{
                     <Dice click={this.addDice.bind(this,"black_cant")} text={this.state.black_cant} color="#011"/>
                 </div>
                 <div className="display-container">
-                    <Display/>
+                    <Display dmg={this.state.dmg} surge={this.state.surge} range={this.state.range} block={this.state.block}/>
                     <Control click={this.reset}/>
                 </div>
 
