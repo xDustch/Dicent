@@ -5,8 +5,8 @@ class Dice extends Component{
     
     render(){
         return(
-            <div className="Dice" onClick={this.props.clickhandler}>
-
+            <div className="Dice" onClick={this.props.click}>
+                {this.props.text}
             </div>
         )
     }
