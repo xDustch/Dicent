@@ -1,0 +1,84 @@
+{
+    "red": {
+        "side": [
+            {
+                "dmg": 0,
+                "surge": 2,
+                "range": 4,
+                "block": 1
+            },
+            {
+                "dmg": 0,
+                "surge": 2,
+                "range": 4,
+                "block": 0
+            },
+            {
+                "dmg": 1,
+                "surge": 2,
+                "range": 4,
+                "block": 0
+            },
+            {
+                "dmg": 0,
+                "surge": 2,
+                "range": 4,
+                "block": 0
+            },
+            {
+                "dmg": 4,
+                "surge": 2,
+                "range": 4,
+                "block": 0
+            },
+            {
+                "dmg": 3,
+                "surge": 2,
+                "range": 4,
+                "block": 0
+            }
+
+        ]
+    },
+    "blue": {
+        "side": [
+            {
+                "dmg": 0,
+                "surge": 2,
+                "range": 4,
+                "block": 1
+            },
+            {
+                "dmg": 0,
+                "surge": 2,
+                "range": 4,
+                "block": 0
+            },
+            {
+                "dmg": 1,
+                "surge": 2,
+                "range": 4,
+                "block": 0
+            },
+            {
+                "dmg": 0,
+                "surge": 2,
+                "range": 4,
+                "block": 0
+            },
+            {
+                "dmg": 4,
+                "surge": 2,
+                "range": 4,
+                "block": 0
+            },
+            {
+                "dmg": 3,
+                "surge": 2,
+                "range": 4,
+                "block": 0
+            }
+
+        ]
+    }
+}

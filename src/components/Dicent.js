@@ -5,14 +5,18 @@ import Dice from './Dice';
 import Control from './Control';
 import Display from './Display';
 
+import dice from './dice.json';
+
 const initial_state = {
-    red_cant: 0,
-    blue_cant : 0,
-    yellow_cant: 0,
-    green_cant: 0,
-    brown_cant: 0,
-    grey_cant: 0,
-    black_cant: 0,
+    //dice count
+    red: 0,
+    blue : 0,
+    yellow: 0,
+    green: 0,
+    brown: 0,
+    grey: 0,
+    black: 0,
+    //attack/block count
     dmg: 0,
     surge: 0,
     range: 0,
@@ -30,12 +34,14 @@ class Dicent extends Component{
 
 
     addDice(color){//increments dice count of variable color
-        console.log("hola");
-        let side = Math.floor(Math.random() * 6) + 1;
-        console.log(side);
+        let side = Math.floor(Math.random() * 6);
+        console.log(dice[color].side[side]);
         this.setState({
             [color]: this.state[color] + 1,
-            block: this.state.block + side
+            block: this.state.block + dice[color].side[side].block,
+            dmg: this.state.dmg + dice[color].side[side].dmg,
+            surge: this.state.surge + dice[color].side[side].surge,
+            range: this.state.range + dice[color].side[side].range //use dice color and side rolled to get data from json
         });
     }
     
@@ -48,13 +54,13 @@ class Dicent extends Component{
         return(
             <div className="Dicent">
                 <div className="dice-container">
-                    <Dice click={this.addDice.bind(this,"red_cant")} text={this.state.red_cant} color="#D11D05"/>
-                    <Dice click={this.addDice.bind(this,"blue_cant")} text={this.state.blue_cant} color="#1D1075"/>
-                    <Dice click={this.addDice.bind(this,"green_cant")} text={this.state.green_cant} color="#1A5E25"/>
-                    <Dice click={this.addDice.bind(this,"yellow_cant")} text={this.state.yellow_cant} color="#FB1"/>
-                    <Dice click={this.addDice.bind(this,"brown_cant")} text={this.state.brown_cant} color="#7A2D15"/>
-                    <Dice click={this.addDice.bind(this,"grey_cant")} text={this.state.grey_cant} color="#666"/>
-                    <Dice click={this.addDice.bind(this,"black_cant")} text={this.state.black_cant} color="#011"/>
+                    <Dice click={this.addDice.bind(this,"red")} text={this.state.red} color="#D11D05"/>
+                    <Dice click={this.addDice.bind(this,"blue")} text={this.state.blue} color="#1D1075"/>
+                    <Dice click={this.addDice.bind(this,"green")} text={this.state.green} color="#1A5E25"/>
+                    <Dice click={this.addDice.bind(this,"yellow")} text={this.state.yellow} color="#FB1"/>
+                    <Dice click={this.addDice.bind(this,"brown")} text={this.state.brown} color="#7A2D15"/>
+                    <Dice click={this.addDice.bind(this,"grey")} text={this.state.grey} color="#666"/>
+                    <Dice click={this.addDice.bind(this,"black")} text={this.state.black} color="#011"/>
                 </div>
                 <div className="display-container">
                     <Display dmg={this.state.dmg} surge={this.state.surge} range={this.state.range} block={this.state.block}/>

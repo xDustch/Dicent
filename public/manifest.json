@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Dicent",
+  "name": "Dicent: Dice Roller for Descent",
   "icons": [
     {
       "src": "favicon.ico",
