@@ -12,25 +12,18 @@ class Dicent extends Component{
             red_cant: 0,
             blue_cant : 0
         }
-        this.addRed = this.addRed.bind(this);
-        this.addBlue = this.addBlue.bind(this);
+        this.addDice = this.addDice.bind(this);
         this.reset = this.reset.bind(this);
     }
 
 
-    addRed(){
+    addDice(color){//increments dice count of each color
         console.log("hola")
         this.setState({
-            red_cant: this.state.red_cant + 1
+            [color]: this.state[color] + 1
         })
     }
-    addBlue(){
-        console.log("chau")
-        this.setState({
-            blue_cant: this.state.blue_cant + 1
-        })
-    }
-
+    
     reset(){
         console.log("reset")
         this.setState({
@@ -43,8 +36,8 @@ class Dicent extends Component{
         return(
             <div className="Dicent">
                 <div className="dice-container">
-                    <Dice click={this.addRed} text={this.state.red_cant}/>
-                    <Dice click={this.addBlue} text={this.state.blue_cant}/>
+                    <Dice click={this.addDice.bind(this,"red_cant")} text={this.state.red_cant}/>
+                    <Dice click={this.addDice.bind(this,"blue_cant")} text={this.state.blue_cant}/>
                     <Dice/>
                     <Dice/>
                     <Dice/>
