@@ -21,6 +21,8 @@ const initial_state = {
     surge: 0,
     range: 0,
     block: 0,
+    //fail?
+    fail: false
 };
 
 class Dicent extends Component{
@@ -35,13 +37,16 @@ class Dicent extends Component{
 
     addDice(color){//increments dice count of variable color
         let side = Math.floor(Math.random() * 6);
-        console.log(dice[color].side[side]);
+        console.log(color,side);
+        if(dice[color].side[side].dmg === "F"){
+            this.setState({fail: true})
+        }
         this.setState({
             [color]: this.state[color] + 1,
             block: this.state.block + dice[color].side[side].block,
             dmg: this.state.dmg + dice[color].side[side].dmg,
             surge: this.state.surge + dice[color].side[side].surge,
-            range: this.state.range + dice[color].side[side].range //use dice color and side rolled to get data from json
+            range: this.state.range + dice[color].side[side].range, //use dice color and side rolled to get data from json
         });
     }
     
@@ -63,7 +68,7 @@ class Dicent extends Component{
                     <Dice click={this.addDice.bind(this,"black")} text={this.state.black} color="#011"/>
                 </div>
                 <div className="display-container">
-                    <Display dmg={this.state.dmg} surge={this.state.surge} range={this.state.range} block={this.state.block}/>
+                    <Display dmg={this.state.dmg} surge={this.state.surge} range={this.state.range} block={this.state.block} fail={this.state.fail}/>
                     <Control click={this.reset}/>
                 </div>
 
