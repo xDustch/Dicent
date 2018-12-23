@@ -7,18 +7,18 @@ class Display extends Component{
           this.props.fail ?
 
             <div className="Display">
-                <span className="icon" role="img" aria-label="emoji">💩</span><span className="icon" role="img" aria-label="emoji">💀</span><span className="icon" role="img" aria-label="emoji">💩</span>
+                <h1><i className="fas fa-poo"></i></h1>
                 <h1>MISS</h1>
-                <span className="icon" role="img" aria-label="emoji">💀</span><span className="icon" role="img" aria-label="emoji">💩</span><span className="icon" role="img" aria-label="emoji">💀</span>
+                <h1><i className="fas fa-skull"></i></h1>
             </div>
 
             :
 
             <div className="Display">
-                <h1>{this.props.dmg} <span className="icon" role="img" aria-label="emoji">❤️</span></h1>
-                <h1>{this.props.surge} <span className="icon" role="img" aria-label="emoji">⚡</span></h1>
-                <h1>{this.props.range} <span className="icon" role="img" aria-label="emoji">🏹</span></h1>
-                <h1>{this.props.block} <span  className="icon" role="img" aria-label="emoji">🛡️</span></h1>
+                <h1>{this.props.dmg} <i className="fas fa-heart"></i></h1>
+                <h1>{this.props.surge} <i className="fas fa-bolt"></i></h1>
+                <h1>{this.props.range} <i className="fas fa-bullseye"></i></h1>
+                <h1>{this.props.block} <i className="fas fa-shield-alt"></i></h1>
             </div>
         )
     }

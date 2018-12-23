@@ -56,6 +56,25 @@
     grid-row: 1;
 }
 
+.fa-heart{
+    color: red;
+}
+.fa-bolt{
+    color: #FB1;
+}
+.fa-bullseye{
+    color: #0FF;
+}
+.fa-shield-alt{
+    color: #A991E5;
+}
+.fa-poo{
+    color: #91553D;
+}
+.fa-skull{
+    color: #D4D;
+}
+
 .Control{
     width: 100%;
     height: 100%;
