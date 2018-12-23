@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/Dicent/precache-manifest.884079801428937ebb68689a5527acb8.js"
+  "/Dicent/precache-manifest.a2949abf51ac5bf5c02621b4ba3b94e5.js"
 );
 
 workbox.clientsClaim();
